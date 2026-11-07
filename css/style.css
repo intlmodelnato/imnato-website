@@ -1,0 +1,296 @@
+/* ==========================================================================
+   IMNATO website styles
+   All colors, fonts and sizes live here. To restyle the whole site, change
+   the values in the :root block below. No other file needs to be touched.
+   ========================================================================== */
+
+:root {
+  --navy: #14305f;        /* header menu, hero, headings */
+  --navy-deep: #0d2145;   /* announcement banner, footer */
+  --steel: #7fa8cc;       /* thin rules and accents */
+  --mist: #eef3f8;        /* pale background bands */
+  --ink: #1c2330;         /* body text */
+  --link: #14509b;        /* links on light backgrounds */
+  --todo-bg: #fff3a8;     /* yellow highlight for [TODO] placeholders */
+  --todo-ink: #5a4300;
+
+  --serif: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: #fff;
+}
+
+img { max-width: 100%; height: auto; }
+
+a { color: var(--link); text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+
+.wrap {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---- Skip link (keyboard users) ---------------------------------------- */
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0.5rem;
+  background: #fff;
+  color: var(--navy);
+  padding: 0.5rem 0.9rem;
+  z-index: 10;
+}
+.skip:focus { left: 0.5rem; }
+
+/* ---- Announcement banner ------------------------------------------------ */
+.banner {
+  background: var(--navy-deep);
+  color: #fff;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.55rem 1rem;
+}
+.banner p { margin: 0; }
+.banner a { color: #fff; font-weight: 600; white-space: nowrap; }
+.banner a:focus-visible { outline-color: #fff; }
+
+/* ---- Header: emblem + title with thin rules ---------------------------- */
+.site-header { background: #fff; }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.brand-emblem { flex: none; display: block; line-height: 0; }
+.brand-emblem img { display: block; height: 72px; width: auto; }
+
+.brand-title {
+  flex: 1;
+  margin: 0;
+  padding: 0.35rem 0;
+  border-top: 1px solid var(--steel);
+  border-bottom: 1px solid var(--steel);
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 3.4vw, 2.2rem);
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+/* ---- Main menu ---------------------------------------------------------- */
+.site-nav { background: var(--navy); }
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 0.35rem;
+  max-width: 68rem;
+}
+.site-nav a {
+  display: block;
+  padding: 0.8rem 0.95rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.98rem;
+}
+.site-nav a:hover { text-decoration: underline; text-underline-offset: 0.3em; }
+.site-nav a:focus-visible { outline-color: #fff; outline-offset: -3px; }
+.site-nav a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--steel); font-weight: 600; }
+
+/* ---- Home page hero ----------------------------------------------------- */
+.hero {
+  background: var(--navy);
+  color: #fff;
+  padding: 3.25rem 0 3rem;
+}
+.hero h1 {
+  margin: 0 0 0.6rem;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.1rem, 6vw, 3.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.hero p { margin: 0.2rem 0; }
+.hero-edition { color: var(--steel); font-size: 1.15rem; }
+.hero-date { font-family: var(--serif); font-size: clamp(1.5rem, 3.5vw, 2rem); margin-top: 1rem !important; }
+.hero-place { font-size: 1.1rem; }
+.hero .button { margin-top: 1.5rem; }
+
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background: #fff;
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 2px;
+}
+.button:hover { background: var(--mist); }
+.button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+/* ---- Flag strip: all NATO member states --------------------------------- */
+.flags { background: #fff; border-bottom: 1px solid var(--steel); }
+.flags ul {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.flags img { display: block; width: 100%; height: auto; }
+
+/* ---- Sub-page heading band ---------------------------------------------- */
+.page-head {
+  background: var(--mist);
+  border-bottom: 1px solid var(--steel);
+}
+.page-head h1 {
+  margin: 0;
+  padding: 2rem 0 1.75rem;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.9rem, 5vw, 2.7rem);
+  color: var(--navy);
+}
+
+/* ---- Content ------------------------------------------------------------ */
+main { display: block; padding-bottom: 3rem; }
+
+.prose { padding-top: 0.5rem; }
+.prose p { max-width: 42rem; }
+.prose h2, .band h2 {
+  margin: 2.25rem 0 0.6rem;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  color: var(--navy);
+}
+.lead { font-family: var(--serif); font-size: 1.25rem; line-height: 1.5; margin-top: 1.75rem; }
+
+/* Objectives on the home page */
+.band {
+  background: var(--mist);
+  border-top: 1px solid var(--steel);
+  border-bottom: 1px solid var(--steel);
+  padding: 0.5rem 0 2.5rem;
+  margin-top: 2.5rem;
+}
+.band .lead { margin-top: 0; }
+.objectives {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 0 1.5rem;
+  margin: 1.25rem 0 0;
+  max-width: 50rem;
+}
+.objectives dt,
+.objectives dd { padding-top: 0.9rem; padding-bottom: 0.9rem; border-top: 1px solid var(--steel); margin: 0; }
+.objectives dt { font-family: var(--serif); font-size: 1.3rem; color: var(--navy); }
+
+/* Contacts */
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 3rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+.contacts li { border-left: 3px solid var(--steel); padding-left: 1rem; }
+
+/* Committees */
+.committee-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 0.5rem 2.5rem;
+  margin-top: 0.5rem;
+}
+.committee { border-left: 3px solid var(--steel); padding: 0 0 0.5rem 1rem; }
+.committee h2 { margin-top: 1.25rem; font-size: 1.35rem; }
+.committee p { margin: 0; }
+
+/* Agenda */
+.day-list { margin: 0.5rem 0 1.5rem; max-width: 42rem; }
+.day { border-top: 1px solid var(--steel); padding-bottom: 0.75rem; }
+.day h2 { font-size: 1.35rem; margin-top: 1.1rem; }
+.day p { margin: 0; }
+
+/* Materials */
+.doc-list { list-style: none; padding: 0; margin: 0.5rem 0 0; max-width: 42rem; }
+.doc-list li { border-left: 3px solid var(--steel); padding: 0 0 0.5rem 1rem; margin-bottom: 0.5rem; }
+.doc-list h2 { font-size: 1.3rem; margin-top: 1.1rem; }
+.doc-list p { margin: 0; }
+
+/* Gallery */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+.tile { margin: 0; }
+.tile img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.tile-box {
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  text-align: center;
+  background: var(--mist);
+  border: 1px dashed var(--steel);
+}
+.tile figcaption { font-size: 0.92rem; margin-top: 0.4rem; }
+
+/* Placeholders: bright on purpose so nobody publishes one by accident */
+.todo {
+  background: var(--todo-bg);
+  color: var(--todo-ink);
+  padding: 0 0.25em;
+  border-radius: 2px;
+}
+
+/* ---- Footer ------------------------------------------------------------- */
+.site-footer {
+  background: var(--navy-deep);
+  color: #fff;
+  padding: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+}
+.site-footer p { margin: 0; }
+.site-footer a { color: #fff; }
+.site-footer a:focus-visible { outline-color: #fff; }
+
+/* ---- Small screens ------------------------------------------------------ */
+@media (max-width: 760px) {
+  .flags ul { grid-template-columns: repeat(8, 1fr); }
+  .brand-emblem img { height: 56px; }
+  .brand { gap: 0.9rem; }
+  .objectives { grid-template-columns: 1fr; }
+  .objectives dt { padding-bottom: 0; }
+  .objectives dd { border-top: 0; padding-top: 0.25rem; }
+  .hero { padding: 2.25rem 0 2rem; }
+}
