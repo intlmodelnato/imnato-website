@@ -13,7 +13,7 @@ If you are new to this, read "Edit a page in your browser" below. You do not nee
 | `index.html` | Home page |
 | `committees.html` | Committees |
 | `agenda.html` | Agenda |
-| `materials.html` | Materials and rules |
+| `materials.html` | Materials |
 | `register.html` | Registration information |
 | `gallery.html` | Photo gallery |
 | `contact.html` | Contact details |
