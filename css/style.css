@@ -227,11 +227,23 @@ main { display: block; padding-bottom: 3rem; }
 .committee h2 { margin-top: 1.25rem; font-size: 1.35rem; }
 .committee p { margin: 0; }
 
-/* Agenda */
-.day-list { margin: 0.5rem 0 1.5rem; max-width: 42rem; }
+/* Schedule */
+.day-list { margin: 0.5rem 0 1.5rem; max-width: 50rem; }
 .day { border-top: 1px solid var(--steel); padding-bottom: 0.75rem; }
 .day h2 { font-size: 1.35rem; margin-top: 1.1rem; }
-.day p { margin: 0; }
+.events { list-style: none; margin: 0; padding: 0; }
+.events > li {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 0 1.25rem;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--mist);
+}
+.events > li:first-child { border-top: 0; }
+.time { font-variant-numeric: tabular-nums; color: var(--navy); font-weight: 600; }
+.where { color: #4a5568; font-size: 0.95rem; }
+.event-sub { margin: 0.35rem 0 0; padding-left: 1.1rem; }
+.event-sub li { margin: 0.15rem 0; }
 
 /* Materials */
 .doc-list { list-style: none; padding: 0; margin: 0.5rem 0 0; max-width: 42rem; }
@@ -293,5 +305,7 @@ main { display: block; padding-bottom: 3rem; }
   .objectives { grid-template-columns: 1fr; }
   .objectives dt { padding-bottom: 0; }
   .objectives dd { border-top: 0; padding-top: 0.25rem; }
+  .events > li { grid-template-columns: 1fr; }
+  .time:empty { display: none; }
   .hero { padding: 2.25rem 0 2rem; }
 }
