@@ -217,15 +217,23 @@ main { display: block; padding-bottom: 3rem; }
 .contacts li { border-left: 3px solid var(--steel); padding-left: 1rem; }
 
 /* Secretariat and delegations (home page) */
-.people {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+.people { margin-top: 1.5rem; }
+.people-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.25rem 2rem;
   list-style: none;
   padding: 0;
-  margin: 1.25rem 0 0;
+  margin: 0 0 1.75rem;
 }
-.people li { border-left: 3px solid var(--steel); padding-left: 1rem; }
+.people-row li {
+  width: 17rem;
+  max-width: 100%;
+  padding-top: 0.6rem;
+  border-top: 3px solid var(--steel);
+  text-align: center;
+}
 .people .where { color: #4a5568; font-size: 0.95rem; }
 
 .delegations {

@@ -46,7 +46,7 @@ Anything the conference still needs to fill in is marked like this: `[TODO: desc
 
 **Add or remove a committee:** open `committees.html` and copy or delete one whole `<article>` ... `</article>` block.
 
-**Update the Secretariat or Delegations (home page):** open `index.html` and find the section heading, "Secretariat 2027" or "Delegations". To change a person or a university, edit the text. To add a person, copy one whole `<li>` ... `</li>` block. A country with no university yet shows only its name; to assign one, type the university name after the `<br>` under the country name.
+**Update the Secretariat or Delegations (home page):** open `index.html` and find the section heading, "Secretariat 2027" or "Delegations". To change a person or a university, edit the text. The Secretariat is shown in four centered rows from most senior at the top; each `<ul>` is one row, and to add a person you copy one whole `<li>` ... `</li>` block into the row where they belong. A country with no university yet shows only its name; to assign one, type the university name after the `<br>` under the country name.
 
 **Change colors or fonts:** edit the values at the top of `css/style.css`, in the section called `:root`.
 
