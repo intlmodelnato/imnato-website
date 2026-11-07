@@ -216,6 +216,36 @@ main { display: block; padding-bottom: 3rem; }
 }
 .contacts li { border-left: 3px solid var(--steel); padding-left: 1rem; }
 
+/* Secretariat and delegations (home page) */
+.people {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1.25rem 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+}
+.people li { border-left: 3px solid var(--steel); padding-left: 1rem; }
+.people .where { color: #4a5568; font-size: 0.95rem; }
+
+.delegations {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 0.9rem 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+}
+.delegations li { display: flex; align-items: flex-start; gap: 0.75rem; }
+.delegations img {
+  flex: none;
+  width: 32px;
+  height: 24px;
+  margin-top: 0.2rem;
+  outline: 1px solid rgba(20, 48, 95, 0.25);
+}
+.unassigned { color: #5a6573; }
+
 /* Committees */
 .committee-list {
   display: grid;

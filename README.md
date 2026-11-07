@@ -46,6 +46,8 @@ Anything the conference still needs to fill in is marked like this: `[TODO: desc
 
 **Add or remove a committee:** open `committees.html` and copy or delete one whole `<article>` ... `</article>` block.
 
+**Update the Secretariat or Delegations (home page):** open `index.html` and find the section heading, "Secretariat 2027" or "Delegations". To change a person or a university, edit the text. To add a person, copy one whole `<li>` ... `</li>` block. A country with no university yet shows only its name; to assign one, type the university name after the `<br>` under the country name.
+
 **Change colors or fonts:** edit the values at the top of `css/style.css`, in the section called `:root`.
 
 **Change the menu, banner, or footer:** these are repeated on all seven pages. Make the same change in every `.html` file, or the pages will not match.
@@ -54,7 +56,7 @@ Anything the conference still needs to fill in is marked like this: `[TODO: desc
 
 - [ ] Update the edition number, dates, and venue on every page (search for the old year)
 - [ ] Update the banner at the top of every page, and the footer year
-- [ ] Update fees, deadlines, schedule, committees, and contacts
+- [ ] Update fees, deadlines, schedule, committees, Secretariat, delegations, and contacts
 - [ ] Replace the materials in `files/` and the photos in `images/gallery/`
 - [ ] Check that the flag strip on the home page still matches the current list of NATO member states
 - [ ] Search for `TODO` and clear every placeholder
