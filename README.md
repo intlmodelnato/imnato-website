@@ -12,7 +12,7 @@ If you are new to this, read "Edit a page in your browser" below. You do not nee
 | --- | --- |
 | `index.html` | Home page |
 | `committees.html` | Committees |
-| `agenda.html` | Agenda |
+| `schedule.html` | Schedule |
 | `materials.html` | Materials |
 | `register.html` | Registration information |
 | `gallery.html` | Photo gallery |
@@ -24,7 +24,7 @@ If you are new to this, read "Edit a page in your browser" below. You do not nee
 
 ## Edit a page in your browser (no software needed)
 
-1. On GitHub, open this repository and click the page file you want to change, for example `agenda.html`.
+1. On GitHub, open this repository and click the page file you want to change, for example `schedule.html`.
 2. Click the pencil icon (**Edit this file**) at the top right of the file.
 3. Change the words you want. Only edit the text between tags (the parts inside `< >`). Leave the tags themselves alone.
 4. Click **Commit changes**, write a short note about what you changed (for example "Add 2027 fees"), and click **Commit changes** again.
@@ -54,7 +54,7 @@ Anything the conference still needs to fill in is marked like this: `[TODO: desc
 
 - [ ] Update the edition number, dates, and venue on every page (search for the old year)
 - [ ] Update the banner at the top of every page, and the footer year
-- [ ] Update fees, deadlines, agenda, committees, and contacts
+- [ ] Update fees, deadlines, schedule, committees, and contacts
 - [ ] Replace the materials in `files/` and the photos in `images/gallery/`
 - [ ] Check that the flag strip on the home page still matches the current list of NATO member states
 - [ ] Search for `TODO` and clear every placeholder
