@@ -288,6 +288,7 @@ main { display: block; padding-bottom: 3rem; }
 .doc-list li { border-left: 3px solid var(--steel); padding: 0 0 0.5rem 1rem; margin-bottom: 0.5rem; }
 .doc-list h2 { font-size: 1.3rem; margin-top: 1.1rem; }
 .doc-list p { margin: 0; }
+.doc-list p + p { margin-top: 0.4rem; }
 
 /* Gallery */
 .tile-grid {
