@@ -20,6 +20,8 @@ If you are new to this, read "Edit a page in your browser" below. You do not nee
 | `css/style.css` | Colors, fonts, and layout for the whole site |
 | `images/` | Logo, flags, and gallery photos |
 | `files/` | Downloadable PDFs |
+| `sitemap.xml`, `robots.txt` | Tell search engines which pages exist. **If you add or rename a page, add it to `sitemap.xml`.** |
+| `favicon.ico` | The small icon shown in browser tabs and search results |
 | `CNAME` | Tells GitHub the site lives at imnato.org. **Never delete or edit this file.** |
 
 ## Edit a page in your browser (no software needed)
@@ -56,11 +58,24 @@ Anything the conference still needs to fill in is marked like this: `[TODO: desc
 
 - [ ] Update the edition number, dates, and venue on every page (search for the old year)
 - [ ] Update the banner at the top of every page, and the footer year
+- [ ] Update the event data on the home page, the sitemap dates, and the preview image (see "Search visibility" above)
 - [ ] Update fees, deadlines, schedule, committees, Secretariat, delegations, and contacts
 - [ ] Replace the materials in `files/` and the photos in `images/gallery/`
 - [ ] Check that the flag strip on the home page still matches the current list of NATO member states
 - [ ] Search for `TODO` and clear every placeholder
 - [ ] Check the domain renewal (see the Handover Guide)
+
+## Search visibility (SEO)
+
+Each page has a title, a description, and a "canonical" address, and the home page also carries **event data** that tells Google the conference's name, dates, and location.
+
+When the conference details change each year:
+- Update the dates, name, and location in the event data on `index.html` (search the file for `application/ld+json`).
+- Update the page titles and descriptions at the top of each page file if they mention the year, edition, or dates.
+- Update the `lastmod` dates in `sitemap.xml`.
+- In Google Search Console, check that the site is still verified and request indexing of the home page after big changes.
+
+When someone shares a link to the site, the preview picture comes from `images/social-preview.png`. Replace that image if the dates or branding change.
 
 ## Rules for this repository
 
